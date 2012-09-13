@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+<Description
+	about="urn:mozilla:install-manifest"
+
+	em:name="DescicloApp"
+	em:description="Uma extensao para Mozilla Firefox para acessar a Desciclopedia com mais facilidade."
+	em:creator="Alefe Souza"
+
+	em:id="descicloapp@aloogle"
+	em:version="3.7"
+	em:homepageURL="http://desciclopedia.org/wiki/User:%C3%81s/DescicloApp"
+
+	em:iconURL="chrome://descicloapp/content/icon_64.png" >
+	<em:type>2</em:type>
+	<em:targetApplication>
+		<Description
+			em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+			em:minVersion="3.0.*"
+			em:maxVersion="17.*" />
+		</em:targetApplication>
+	<em:file>
+		<Description
+			about="urn:mozilla:extension:descicloapp"
+			em:package="content/descicloapp/" />
+	</em:file>
+</Description>
+</RDF>

@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>DescicloApp</title>
+<link rel="shortcut icon" href="icons/icon.png" />
+<link rel="author" href="https://plus.google.com/101361157875821775334/" />
+<link rel="stylesheet" href="css/select.css" />
+<link rel="stylesheet" href="css/button.css" />
+<link rel="stylesheet" href="css/inputtext.css" />
+<link rel="stylesheet" href="css/tooltip.css" /> 
+<script src="js/popup.js"></script>
+<style type="text/css">
+body {
+	font-family: Arial;
+	background-color: #ffffff;
+	-moz-user-select: none;
+	font-size: 12px;
+	width: 310px;
+	color: #000000;
+	background:url(imagens/batata.png) no-repeat center;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+hr {
+	border: 0px;
+	height: 1px;
+	background-color: #0000ff;
+}
+
+.menuitem {
+	height:20px;
+	line-height:20px;
+	padding: 2px 4px;
+	vertical-align:middle;
+	border-radius: 3px;
+}
+
+.menuitem:hover {
+	color: #ffffff;
+	text-decoration:none;
+	cursor: pointer;
+	border: #000000 solid 1px;
+	background:url(imagens/preto_real_player.png);
+}
+
+.menuitem:active {
+	color: #ffffff;
+	text-decoration:none;
+	cursor: pointer;
+	background:url(imagens/preto_real_player_active.png);
+}
+
+.menuitem img {
+	float:left;
+	margin-top:2px;
+	margin-right:4px; 
+}
+
+.seta {
+	background:url(imagens/frente.png) no-repeat center right;
+}
+
+.seta:hover {
+	background:url(imagens/frente_mouse.png) no-repeat center right;
+}
+
+div.sombra:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 255, 0.2);
+}
+
+div.sombra:active {
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#fechar {
+	height: 24px;
+	width: 24px;
+	float:right;
+	background: url(imagens/x.png) no-repeat;
+}
+
+#fechar:hover {
+	background: url(imagens/x_mouse.png);
+}
+
+#fechar:active {
+	background: url(imagens/x_ativo.png);
+}
+</style>
+</head>
+<body>
+<div align="center"><b>DescicloApp</b> <div id="fechar" class="tooltip8"><span>Fechar</span></div></div>
+<br><br>
+<table height="25px">
+<tr><div class="tooltip4"><span>Escolha o dom&iacute;nio alternativo</span><select name="alternativo" id="alternativo" style="height:22px;width:50px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float:left;">
+<option value="desciclopedia.org">.org</option>
+<option value="desciclopedia.ws">.ws</option>
+<option value="pudim.info">.info</option>
+<option value="vist.as">.as</option>
+<option value="pesquisa.la">.la</option>
+<option value="desnoticias.org">desnoticias.org</option>
+<option value="sophia.desciclopedia.org">sophia.</option>
+<option value="roberto.desciclopedia.org">roberto.</option>
+</select></div><input type="text" class="text" id="q" style="float:left; width: 175px; border-radius: 0px;" autocomplete="on" placeholder="Escreva algo..." name="q" /><div class="tooltip"><span>Ir a esta p&aacute;gina</span><input type="submit" id="ir" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url(imagens/avancarwp7.png); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius:0px;" value="" /></div><div class="tooltip"><span>Editar ou criar essa p&aacute;gina</span><input type="submit" id="editar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url(imagens/novowp7.png); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius: 0px;" value="" /></div><div class="tooltip"><span>Pesquisar</span><input type="submit" id="pesquisar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; float:left; border-bottom-right-radius: 10px; border-top-right-radius: 10px; background-image:url(imagens/buscawp7.png); background-repeat: no-repeat; background-position: center; background-size: 20px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="" /></div></tr></table>
+<br><br>
+	<div id="irb" class="menuitem">
+		<img src="icons/icon.png"> Ir a Desciclop&eacute;dia
+	</div>
+<hr>
+	<div id="pagina" class="menuitem">
+		<img src="imagens/mafagafo.png" width="16px"> Minha p&aacute;gina
+	</div>
+	<div id="discussao" class="menuitem">
+		<img src="imagens/discussao.png"> Minha discuss&atilde;o
+	</div>
+	<div id="contribuicao" class="menuitem">
+		<img src="imagens/contribuicao.png" width="16px"> Minhas contribui&ccedil;&otilde;es
+	</div>
+	<div id="vigiado" class="menuitem">
+		<img src="imagens/vigiado.png" width="16px" height="16px"> P&aacute;ginas vigiadas </div>
+	</div>
+	<div id="carregar" class="menuitem">
+		<img src="imagens/upload.png" width="16px"> Carregar arquivo
+	</div> 
+	<div id="mensagem" class="menuitem"><div class="seta">
+		<img src="imagens/enviarmensagem.png" width="16px" height="16px"> Enviar uma mensagem </div>
+	</div>
+	<div id="recentes" class="menuitem">
+		<img src="imagens/mrwp7.png" width="16px" height="16px"> Mudan&ccedil;as recentes
+	</div>
+
+<br><br>
+
+<div class="tooltip3 sombra" style="float:left"><a id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="blog"><img src="imagens/blogger.ico" height="16px"></a><span>Blog</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="tumblr"><img src="imagens/tumblr.gif" height="16px"></a><span>Tumblr</span></div><div id="ajuda" class="tooltip2 sombra" style="float: right;"><img src="imagens/ajuda.png" width="16px" height="16px"><span>Ajuda</span></div>
+</body>
+</html>

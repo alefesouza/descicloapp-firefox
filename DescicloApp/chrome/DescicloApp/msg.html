@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Enviar uma mensagem - DescicloApp</title>
+<link rel="shortcut icon" href="icons/icon.png" />
+<link rel="author" href="https://plus.google.com/101361157875821775334/" />
+<link rel="stylesheet" href="popup.html" />
+<link rel="stylesheet" href="css/select.css" />
+<link rel="stylesheet" href="css/button.css" />
+<link rel="stylesheet" href="css/inputtext.css" />
+<link rel="stylesheet" href="css/tooltip.css" /> 
+<script src="js/msg.js"></script>
+<style type="text/css">
+body {
+	font-family:  Arial;
+	-moz-user-select: none;
+	background-color: #ffffff;
+	font-size: 12px;
+	color: #000000;
+	width:305px;
+	height:305px;
+	background: url(imagens/batata.png) no-repeat center;
+}
+
+#voltar {
+	height:20px;
+	width:20px;
+	vertical-align:middle;
+	background: url('imagens/voltarwp7.png') no-repeat;
+	background-size: 20px;
+	float:left;
+	margin-top:2px;
+	margin-right:4px;
+}
+
+#voltar:hover {
+	background: url('imagens/voltarwp7mouse.png') no-repeat top left;
+	background-size: 20px;
+}
+</style> 
+</head>
+<body>
+<div class="tooltip6"><span>Voltar</span><div id="voltar"></div></div><div align="center"><h4>Enviar mensagem</h4></div></div><hr>
+<br>
+<table width="25px"><tr><div><div class="tooltip4"><span>Escolha o dom&iacute;nio alternativo</span><select name="alternativomsg" id="alternativo" style="height:22px;width:50px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float:left;">
+<option value="desciclopedia.org">.org</option>
+<option value="desciclopedia.ws">.ws</option>
+<option value="pudim.info">.info</option>
+<option value="vist.as">.as</option>
+<option value="pesquisa.la">.la</option>
+<option value="desnoticias.org">desnoticias.org</option>
+<option value="sophia.desciclopedia.org">sophia.</option>
+<option value="roberto.desciclopedia.org">roberto.</option>
+</select></div><input type="text" id="q" autocomplete="on" class="text" style="float:left; width: 255px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left;" placeholder="Enviar para..." /></div></tr></table>
+<br><br>
+<div class="tooltip5"><span>Enviar mensagem (discuss&atilde;o)</span><input type="submit" class="azul" id="ir" style="min-width: 4em; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float: left; width: 152px; border: 1px solid #aaa;" value="Mensagem" /></div><div class="tooltip5"><span>Enviar e-mail (contatar usu&aacute;rio)</span><input type="submit" class="azul" id="editar" value="E-mail" style="min-width: 4em; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left; width: 152px; border: 1px solid #aaa;" /></div>
+</body>
+</head>
+</html>

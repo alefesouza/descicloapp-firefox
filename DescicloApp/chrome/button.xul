@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="chrome://descicloapp/content/button.css"?>
+<!DOCTYPE overlay >
+<overlay id="descicloapp-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/javascript" src="chrome://descicloapp/content/button.js"/>
+<toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="descicloapp-button-1"
+	label="DescicloApp"
+	tooltiptext="DescicloApp"
+	oncommand="AloogleDescicloAppButton[1]()"
+	class="toolbarbutton-1 chromeclass-toolbar-additional" />
+</toolbarpalette>
+</overlay>

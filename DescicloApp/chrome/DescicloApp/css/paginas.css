@@ -1,0 +1,140 @@
+/* Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+/* Styles common to WebUI pages that share the options pages style */
+
+/* Codigo copiado da antiga pagina de configuracoes do Google Chrome, que eu tentei adaptar para Firefox */
+
+body {
+  cursor: default;
+  font-size: 13px;
+}
+
+a:link {
+  color: rgb(63, 110, 194);
+}
+
+a:active {
+  color: rgb(37, 64, 113);
+}
+
+#navbar-content-title {
+  -moz-padding-end: 24px;
+  -moz-user-select: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 200%;
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 14px;
+  padding-top: 13px;
+  text-align: end;
+  text-shadow: white 0 1px 2px;
+}
+
+#main-content {
+  display: -moz-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#navbar {
+  margin: 0;
+}
+
+#navbar-container {
+  -moz-border-end: 1px solid #c6c9ce;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 216px;
+  z-index: 2;
+}
+
+html.hide-menu #navbar-container {
+  display: none;
+}
+
+#navbar-container > ul {
+  -moz-user-select: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  font-size: 105%;
+  outline: none;
+  padding: 7px 0;
+  text-align: end;
+  text-shadow: white 0 1px 1px;
+  -moz-padding-end: 24px;
+}
+
+.navbar-item:active {
+  border-bottom: 1px solid #8faad9;
+  border-top: 1px solid #8faad9;
+}
+
+.navbar-item-selected {
+  -moz-box-shadow: 0 1px 0 #f7f7f7;
+  background-color: #bbcee9;
+  border-bottom: 1px solid #8faad9;
+  border-top: 1px solid #8faad9;
+  color: black;
+  text-shadow: #bbcee9 0 1px 1px;
+}
+
+#mainview {
+  -moz-box-align: stretch;
+  -moz-padding-start: 216px;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+html.hide-menu #mainview {
+  -moz-padding-start: 0;
+}
+
+#mainview-content {
+  min-height: 100%;
+  position: relative;
+}
+
+#page-container {
+  box-sizing: border-box;
+  max-width: 888px;
+  min-width: 600px;
+   left: 300px;
+  padding: 0 24px;
+}
+
+.page h1 {
+  -moz-padding-end: 24px;
+  -moz-user-select: none;
+  border-bottom: 1px solid #eeeeee;
+  color: #333;
+  font-size: 200%;
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 13px;
+  text-shadow: white 0 1px 2px;
+}

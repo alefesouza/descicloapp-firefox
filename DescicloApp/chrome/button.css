@@ -1,0 +1,15 @@
+#descicloapp-button-1 {
+	list-style-image: url("chrome://descicloapp/content/icon_24.png");
+}
+
+toolbar[iconsize="small"] #descicloapp-button-1 {
+	list-style-image: url("chrome://descicloapp/content/icon.png");
+}
+
+#descicloapp-button-1:hover {
+	list-style-image: url("chrome://descicloapp/content/icon_24_mouse.png");
+}
+
+toolbar[iconsize="small"] #descicloapp-button-1:hover {
+	list-style-image: url("chrome://descicloapp/content/icon_mouse.png");
+}

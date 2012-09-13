@@ -1,0 +1,18 @@
+/* Codigo das barras de texto da extensao */
+
+input.text {
+	border-radius: 10px;
+	border: 1px solid #000000;
+	background: transparent;
+	height: 22px;
+}
+
+input.text:hover {
+	box-shadow: inset 0 5px 5px rgba(0,0,0,0.1);
+	border: #007eff solid 1px; 
+}
+
+input.text:focus {
+	background: #e4e4e4;
+	border: #000000 solid 2px;
+}
