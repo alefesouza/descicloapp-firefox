@@ -6,7 +6,14 @@
 <link rel="stylesheet" href="css/select.css" />
 <link rel="stylesheet" href="css/button.css" />
 <link rel="stylesheet" href="css/inputtext.css" />
-<link rel="stylesheet" href="css/tooltip.css" /> 
+<link rel="stylesheet" href="css/tooltip.css" />
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/jquery/jquery.ui.core.js"></script>
+<script src="js/jquery/jquery.ui.widget.js"></script>
+<script src="js/jquery/jquery.ui.button.js"></script>
+<script src="js/jquery/jquery.ui.position.js"></script>
+<script src="js/jquery/jquery.ui.dialog.js"></script>
+<link rel="stylesheet" href="css/jquery/jquery.ui.all.css" />
 <script src="js/popup.js"></script>
 <style type="text/css">
 body {
@@ -17,8 +24,6 @@ body {
 	width: 310px;
 	color: #000000;
 	background:url(imagens/batata.png) no-repeat center;
-	overflow-x:hidden;
-	overflow-y:hidden;
 }
 
 hr {
@@ -27,12 +32,26 @@ hr {
 	background-color: #0000ff;
 }
 
+a.script{
+	color: rgb(63, 110, 194);
+}
+
+a.script:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+a.script:active {
+	color: rgb(37, 64, 113);
+}
+
 .menuitem {
 	height:20px;
 	line-height:20px;
 	padding: 2px 4px;
 	vertical-align:middle;
 	border-radius: 3px;
+	-moz-transition: all 0.5s;
 }
 
 .menuitem:hover {
@@ -41,6 +60,7 @@ hr {
 	cursor: pointer;
 	border: #000000 solid 1px;
 	background:url(imagens/preto_real_player.png);
+	-moz-transition: all 0.5s;
 }
 
 .menuitem:active {
@@ -64,8 +84,13 @@ hr {
 	background:url(imagens/frente_mouse.png) no-repeat center right;
 }
 
+di.sombra {
+	-moz-transition: all 0.5s;
+}
+
 div.sombra:hover {
 	box-shadow: 3px 3px 3px rgba(0, 0, 255, 0.2);
+	-moz-transition: all 0.5s;
 }
 
 div.sombra:active {
@@ -117,7 +142,7 @@ div.sombra:active {
 		<img src="imagens/contribuicao.png" width="16px"> Minhas contribui&ccedil;&otilde;es
 	</div>
 	<div id="vigiado" class="menuitem">
-		<img src="imagens/vigiado.png" width="16px" height="16px"> P&aacute;ginas vigiadas </div>
+		<img src="imagens/vigiado.png" width="16px" height="16px"> P&aacute;ginas vigiadas
 	</div>
 	<div id="carregar" class="menuitem">
 		<img src="imagens/upload.png" width="16px"> Carregar arquivo
@@ -128,9 +153,23 @@ div.sombra:active {
 	<div id="recentes" class="menuitem">
 		<img src="imagens/mrwp7.png" width="16px" height="16px"> Mudan&ccedil;as recentes
 	</div>
+	<div class="menuitem"><div id="mais"><img src="imagens/baixowp7.png" width="16px"> Mais</div>
+</div><div><div class="spoiler" style="display: none;"><div id="desnoticias" class="menuitem"><img src="imagens/desnoticias.png" width="16px" height="16px"> Desnot&iacute;cias </div><div id="descionario" class="menuitem"><img src="imagens/descionario.png" width="16px" height="16px"> Descion&aacute;rio </div><div id="deslivros" class="menuitem"><img src="imagens/deslivros.png" width="16px" height="16px"> Deslivros </div><div id="despoesias" class="menuitem"><img src="imagens/despoesias.png" width="16px" height="16px"> Despoesias </div><div id="descifras" class="menuitem"><img src="imagens/descifras.png" width="16px" height="16px"> Descifras </div><div id="desentrevistas" class="menuitem"><img src="imagens/desentrevistas.png" width="16px" height="16px"> Desentrevistas </div><div id="descitacoes" class="menuitem"><img src="imagens/descitacoes.png" width="16px" height="16px"> Descita&ccedil;&otilde;es </div><div id="deslistas" class="menuitem"><img src="imagens/deslistas.png" width="16px" height="16px"> Deslistas </div><div id="desinopses" class="menuitem"><img src="imagens/desinopses.png" width="16px" height="16px"> Desinopses </div><div id="fatos" class="menuitem"><img src="imagens/fatos.png" width="16px" height="16px"> Fatos </div>
+</div></div>
 
 <br><br>
 
-<div class="tooltip3 sombra" style="float:left"><a id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="blog"><img src="imagens/blogger.ico" height="16px"></a><span>Blog</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="tumblr"><img src="imagens/tumblr.gif" height="16px"></a><span>Tumblr</span></div><div id="ajuda" class="tooltip2 sombra" style="float: right;"><img src="imagens/ajuda.png" width="16px" height="16px"><span>Ajuda</span></div>
+<div class="tooltip3 sombra" style="float:left"><a id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="blog"><img src="imagens/blogger.ico" height="16px"></a><span>Blog</span></div>&nbsp;&nbsp;<div id="ajuda" class="tooltip2 sombra" style="float: right;"><img src="imagens/ajuda.png" width="16px" height="16px"><span>Ajuda</span></div>
+
+
+<div style="display:none;">
+<div id="alerta-ir" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto que p&aacute;gina voc&ecirc; quer ir na Desciclop&eacute;dia, poser</p>
+</div>
+<div id="alerta-editar" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto que p&aacute;gina voc&ecirc; quer editar ou criar na Desciclop&eacute;dia, s&oacute; n&atilde;o vai fazer merda pra um sysop n&atilde;o te pegar, seu n00b!!</p>
+</div>
+<div id="alerta-pesquisar" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Escreva algo primeiro: Digite na barra de texto o que voc&ecirc; quer pesquisar na <s>wiki</s> Desciclop&eacute;dia, ou n&atilde;o</p>
+<p><font style="text-decoration: underline; font-weight:bold;">Dica:</font> Voc&ecirc; pode adicionar a busca do DescicloApp direto na barra de buscas do Firefox <a onclick="window.open('paginas/busca.html'); window.close()" class="script">clicando aqui</a></p>
+</div>
+</div>
 </body>
 </html>

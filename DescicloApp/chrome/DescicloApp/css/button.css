@@ -59,7 +59,6 @@ select:not(.custom-appearance):focus {
 		0 0 1px #c0c0c0,
 		0 0 1px #c0c0c0;
 	-moz-transition: border-color 200ms;
-	border-color: #4080fa;
 	outline: none;
 }
 

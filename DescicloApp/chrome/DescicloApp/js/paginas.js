@@ -1,9 +1,5 @@
 function $(id){  
 		return document.getElementById(id);  
-	}
-
-function opera(){
-	window.open('opera.html', '_self')
 }
 
 function chrome(){
@@ -22,7 +18,11 @@ function shareGooglePlus(){
 	window.open('https://plus.google.com/share?url=http://desciclopedia.org/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp', '', 'width=600,height=400')
 }
 
-window.onload=function(){  
+function descicloApp(){
+	window.open('http://desciclopedia.org/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp')
+}
+
+window.onload=function(){
 	$('faq').onclick = function(){  
 		window.location="faq.html";
 	}
@@ -32,7 +32,10 @@ window.onload=function(){
 	$('sobre').onclick = function(){  
 		window.location="sobre.html";
 	}
-	$('opera').onclick=opera;
+	$('descicloapp').onclick=descicloApp;
+	$('opera').onclick = function(){  
+		window.location="opera.html";
+	}
 	$('chrome').onclick=chrome;
 	$('sharefacebook').onclick=shareFacebook;
 	$('sharetwitter').onclick=shareTwitter;

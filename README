@@ -2,7 +2,7 @@ Alefe Souza https://plus.google.com/101361157875821775334/about
 
 Aqui está o código fonte da versão mais recente do DescicloApp, uma extensão para Google Chrome, Mozilla Firefox e Opera que eu fiz para a Desciclopédia, você pode baixar a pasta e usar como quiser, como estudar o código e aprender a fazer extensões simples para Mozilla Firefox por exemplo. O DescicloApp para Firefox eu tentei deixar o mais próximo possível do DescicloApp para Chrome e Opera, já que o Firefox não usa as extensões em uma popup.
 
-Esse é o código da versão 3.7
+Esse é o código da versão 4.0
 
 Algumas instruções de como usar essa pasta:
 
@@ -10,6 +10,6 @@ Algumas instruções de como usar essa pasta:
 
 ** Como uso essa pasta? **
 
-•Se você quiser criar extensões bem simples para Firefox a partir do DescicloApp primeiro baixe essa pasta clicando ali em cima "ZIP" e depois descompacte, já que vai baixar em .zip, você vai ver todo o código do DescicloApp para Firefox, para carregar a extensão no Firefox simplesmente compacte a pasta com o arquivo install.rdf para .zip (.zip não .rar) e renomeie o .zip para .xpi, então você instala normamente apenas executando o arquivo, você pode usar essa pasta para dar origem a novas extensões para Firefox, eu não exigo que coloque créditos, mas ficaria feliz se colocasse.
+•Se você quiser criar extensões bem simples para Firefox a partir do DescicloApp primeiro baixe essa pasta clicando ali em cima "ZIP" e depois descompacte, já que vai baixar em .zip, você vai ver todo o código do DescicloApp para Firefox, para carregar a extensão no Firefox simplesmente compacte a pasta com o arquivo install.rdf para .zip (.zip não .rar) e renomeie o .zip para .xpi, então você instala normamente apenas executando o arquivo, você pode usar essa pasta para dar origem a novas extensões para Firefox, coloque os devidos créditos, como um "Baseado no DescicloApp" com o link para a página da extensão na Desciclopédia ou um "Créditos a Alefe Souza" ou "Créditos a Aloogle" com um link para meu Twitter ou Google+ ou a página da Aloogle no Google Code por exemplo.
 
 Veja a documentação completa de como fazer extensões para Firefox em https://developer.mozilla.org/en-US/docs/Extensions

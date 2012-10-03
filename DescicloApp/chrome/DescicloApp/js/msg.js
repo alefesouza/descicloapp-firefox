@@ -1,4 +1,4 @@
-function $(id){  
+function $$(id){  
 		return document.getElementById(id);  
 	}  
 
@@ -7,29 +7,48 @@ function enter(){
 		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new'); window.close(); }
 }
 
-function ir(){
-	var irei = document.getElementById('q');
-	if(irei.value != "") {
-		//Coloquei e ingles (user_talk) porque se colocasse em portugues (Usu%C3%A1rio_Discuss%C3%A3o) dava um erro estranho quando o user tinha acento
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new', 'descicloapp'); window.close(); }
-	else {
-		alert('Escreva algo primeiro: Digite na barra de texto o username de um usu\u00E1rio que voc\u00EA quer enviar uma mensagem (er\u00f3tica), via p\u00E1gina de discuss\u00E3o') }
+function fechar(){
+	window.close();
 }
 
-function editar(){
-	var editarei = document.getElementById('q');
-	if(editarei.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Contatar_usu%C3%A1rio/' + document.getElementById('q').value, 'descicloapp'); window.close(); }
+function mensagem(){
+	if(q.value != "") {
+		//Coloquei e ingles (user_talk) porque se colocasse em portugues (Usu%C3%A1rio_Discuss%C3%A3o) dava um erro estranho quando o user tinha acento
+		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new'); window.close(); }
 	else {
-		alert('Escreva algo primeiro: Digite na barra de texto o username de um usu\u00E1rio que voc\u00EA quer enviar um e-mail na Desciclop\u00E9dia (bem particular, s\u00f3 voc\u00EAs dois (ui!)), via Contatar usu\u00E1rio') }
+		$(function() {
+			$( "#alerta-mensagem" ).dialog({
+				buttons: {
+					Ok: function() {
+					$( this ).dialog( "close" );
+				}
+			}
+		});
+	}); }
+}
+
+function email(){
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Contatar_usu%C3%A1rio/' + document.getElementById('q').value); window.close(); window.close(); }
+	else {
+		$(function() {
+			$( "#alerta-email" ).dialog({
+				buttons: {
+					Ok: function() {
+					$( this ).dialog( "close" );
+				}
+			}
+		});
+	}); }
 }
 
 window.onload = function(){
-	$('voltar').onclick = function(){  
+	$$('fechar').onclick=fechar;
+	$$('voltar').onclick = function(){  
 		window.location="popup.html";
 	}
-	$('ir').onclick=ir;
-	$('editar').onclick=editar;
+	$$('mensagem').onclick=mensagem;
+	$$('email').onclick=email;
 }
 
 window.onkeypress = function(){

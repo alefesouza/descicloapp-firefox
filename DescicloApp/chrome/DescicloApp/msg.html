@@ -7,7 +7,14 @@
 <link rel="stylesheet" href="css/select.css" />
 <link rel="stylesheet" href="css/button.css" />
 <link rel="stylesheet" href="css/inputtext.css" />
-<link rel="stylesheet" href="css/tooltip.css" /> 
+<link rel="stylesheet" href="css/tooltip.css" />
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/jquery/jquery.ui.core.js"></script>
+<script src="js/jquery/jquery.ui.widget.js"></script>
+<script src="js/jquery/jquery.ui.button.js"></script>
+<script src="js/jquery/jquery.ui.position.js"></script>
+<script src="js/jquery/jquery.ui.dialog.js"></script>
+<link rel="stylesheet" href="css/jquery/jquery.ui.all.css" />  
 <script src="js/msg.js"></script>
 <style type="text/css">
 body {
@@ -17,7 +24,7 @@ body {
 	font-size: 12px;
 	color: #000000;
 	width:305px;
-	height:305px;
+	height: 400px;
 	background: url(imagens/batata.png) no-repeat center;
 }
 
@@ -36,12 +43,27 @@ body {
 	background: url('imagens/voltarwp7mouse.png') no-repeat top left;
 	background-size: 20px;
 }
+
+#fechar {
+	height: 24px;
+	width: 24px;
+	float:right;
+	background: url(imagens/x.png) no-repeat;
+}
+
+#fechar:hover {
+	background: url(imagens/x_mouse.png);
+}
+
+#fechar:active {
+	background: url(imagens/x_ativo.png);
+}
 </style> 
 </head>
 <body>
-<div class="tooltip6"><span>Voltar</span><div id="voltar"></div></div><div align="center"><h4>Enviar mensagem</h4></div></div><hr>
+<div class="tooltip6" id="voltar"><span>Voltar</span></div><div id="fechar" class="tooltip8"><span>Fechar</span></div></div><div align="center"><h4>Enviar mensagem</h4></div><hr>
 <br>
-<table width="25px"><tr><div><div class="tooltip4"><span>Escolha o dom&iacute;nio alternativo</span><select name="alternativomsg" id="alternativo" style="height:22px;width:50px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float:left;">
+<table width="25px"><tr><div><div class="tooltip4"><span>Escolha o dom&iacute;nio alternativo</span><select id="alternativo" style="height:22px;width:50px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float:left;">
 <option value="desciclopedia.org">.org</option>
 <option value="desciclopedia.ws">.ws</option>
 <option value="pudim.info">.info</option>
@@ -52,7 +74,15 @@ body {
 <option value="roberto.desciclopedia.org">roberto.</option>
 </select></div><input type="text" id="q" autocomplete="on" class="text" style="float:left; width: 255px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left;" placeholder="Enviar para..." /></div></tr></table>
 <br><br>
-<div class="tooltip5"><span>Enviar mensagem (discuss&atilde;o)</span><input type="submit" class="azul" id="ir" style="min-width: 4em; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float: left; width: 152px; border: 1px solid #aaa;" value="Mensagem" /></div><div class="tooltip5"><span>Enviar e-mail (contatar usu&aacute;rio)</span><input type="submit" class="azul" id="editar" value="E-mail" style="min-width: 4em; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left; width: 152px; border: 1px solid #aaa;" /></div>
+<div class="tooltip5"><span>Enviar mensagem (discuss&atilde;o)</span><input type="submit" class="azul" id="mensagem" style="min-width: 4em; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float: left; width: 152px; border: 1px solid #aaa;" value="Mensagem" /></div><div class="tooltip5"><span>Enviar e-mail (contatar usu&aacute;rio)</span><input type="submit" class="azul" id="email" value="E-mail" style="min-width: 4em; border-top-left-radius: 0px; border-bottom-left-radius: 0px; float: left; width: 152px; border: 1px solid #aaa;" /></div>
+
+
+
+<div style="display:none;">
+<div id="alerta-mensagem" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto o username de um usu&aacute;rio que voc&ecirc; quer enviar uma mensagem <s>safada</s>, via p&aacute;gina de discuss&atilde;o</p>
+</div>
+<div id="alerta-email" title="DescicloApp"><p>Escreva algo primeiro:</p><p>Digite na barra de texto o username de um usu&aacute;rio que voc&ecirc; quer enviar um e-mail na Desciclop&eacute;dia, via Contatar usu&aacute;rio</p>
+</div>
+</div>
 </body>
-</head>
 </html>
