@@ -2,11 +2,6 @@ function $$(id){
 		return document.getElementById(id);  
 }
 
-function enter(){
-if(event.keyCode=='13'){
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/' + document.getElementById('q').value); window.close(); }
-}
-
 function fechar(){
 	window.close();
 }
@@ -214,8 +209,4 @@ window.onload = function(){
 		$$('twitter').onclick=twitter;
 		$$('blog').onclick=blog;
 		$$('ajuda').onclick=ajuda;
-}
-
-window.onkeypress = function(){
-		enter()
 }

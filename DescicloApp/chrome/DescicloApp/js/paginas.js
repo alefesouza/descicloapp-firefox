@@ -1,4 +1,4 @@
-function $(id){  
+function $$(id){  
 		return document.getElementById(id);  
 }
 
@@ -23,21 +23,21 @@ function descicloApp(){
 }
 
 window.onload=function(){
-	$('faq').onclick = function(){  
+	$$('faq').onclick = function(){  
 		window.location="faq.html";
 	}
-	$('changelog').onclick = function(){  
+	$$('changelog').onclick = function(){  
 		window.location="changelog.html";
 	}
-	$('sobre').onclick = function(){  
+	$$('sobre').onclick = function(){  
 		window.location="sobre.html";
 	}
-	$('descicloapp').onclick=descicloApp;
-	$('opera').onclick = function(){  
+	$$('descicloapp').onclick=descicloApp;
+	$$('opera').onclick = function(){  
 		window.location="opera.html";
 	}
-	$('chrome').onclick=chrome;
-	$('sharefacebook').onclick=shareFacebook;
-	$('sharetwitter').onclick=shareTwitter;
-	$('sharegoogleplus').onclick=shareGooglePlus;
+	$$('chrome').onclick=chrome;
+	$$('sharefacebook').onclick=shareFacebook;
+	$$('sharetwitter').onclick=shareTwitter;
+	$$('sharegoogleplus').onclick=shareGooglePlus;
 }

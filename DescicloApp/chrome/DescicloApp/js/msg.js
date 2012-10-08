@@ -1,10 +1,5 @@
 function $$(id){  
 		return document.getElementById(id);  
-	}  
-
-function enter(){
-	if(event.keyCode=='13'){
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=User_talk:' + document.getElementById('q').value + '&action=edit&section=new'); window.close(); }
 }
 
 function fechar(){
@@ -49,8 +44,4 @@ window.onload = function(){
 	}
 	$$('mensagem').onclick=mensagem;
 	$$('email').onclick=email;
-}
-
-window.onkeypress = function(){
-	enter()
 }
