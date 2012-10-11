@@ -122,7 +122,7 @@ html.hide-menu #mainview {
   box-sizing: border-box;
   max-width: 888px;
   min-width: 600px;
-   left: 300px;
+  left: 300px;
   padding: 0 24px;
 }
 

@@ -1,11 +1,3 @@
-function $$(id){  
-		return document.getElementById(id);  
-}
-
-function fechar(){
-	window.close();
-}
-
 function mensagem(){
 	if(q.value != "") {
 		//Coloquei e ingles (user_talk) porque se colocasse em portugues (Usu%C3%A1rio_Discuss%C3%A3o) dava um erro estranho quando o user tinha acento
@@ -20,9 +12,9 @@ function mensagem(){
 			}
 		});
 	}); }
-}
+};
 
-function email(){
+function email() {
 	if(q.value != "") {
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Contatar_usu%C3%A1rio/' + document.getElementById('q').value); window.close(); window.close(); }
 	else {
@@ -35,13 +27,13 @@ function email(){
 			}
 		});
 	}); }
-}
+};
 
 window.onload = function(){
-	$$('fechar').onclick=fechar;
-	$$('voltar').onclick = function(){  
+	$('#fechar').click(function() { window.close(); })
+	$('#voltar').click(function(){  
 		window.location="popup.html";
-	}
-	$$('mensagem').onclick=mensagem;
-	$$('email').onclick=email;
+	});
+	$('#mensagem').click(function() { mensagem() });
+	$('#email').click(function() { email() });
 }

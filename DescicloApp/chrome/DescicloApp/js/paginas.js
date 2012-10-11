@@ -1,7 +1,3 @@
-function $$(id){  
-		return document.getElementById(id);  
-}
-
 function chrome(){
 	window.open('http://desciclopedia.org/wiki/Usu%C3%A1rio:%C3%81s/DescicloApp/Chrome', '_blank')
 }
@@ -23,21 +19,21 @@ function descicloApp(){
 }
 
 window.onload=function(){
-	$$('faq').onclick = function(){  
+	$('#faq').click(function(){  
 		window.location="faq.html";
-	}
-	$$('changelog').onclick = function(){  
+	});
+	$('#changelog').click(function() {   
 		window.location="changelog.html";
-	}
-	$$('sobre').onclick = function(){  
+	});
+	$('#sobre').click(function() { 
 		window.location="sobre.html";
-	}
-	$$('descicloapp').onclick=descicloApp;
-	$$('opera').onclick = function(){  
+	});
+	$('#descicloapp').click(function() { descicloApp() });
+	$('#opera').click(function() {   
 		window.location="opera.html";
-	}
-	$$('chrome').onclick=chrome;
-	$$('sharefacebook').onclick=shareFacebook;
-	$$('sharetwitter').onclick=shareTwitter;
-	$$('sharegoogleplus').onclick=shareGooglePlus;
+	});
+	$('#chrome').click(function() { chrome() });
+	$('#sharefacebook').click(function() { shareFacebook() });
+	$('#sharetwitter').click(function() { shareTwitter() });
+	$('#sharegoogleplus').click(function() { shareGooglePlus() });
 }
