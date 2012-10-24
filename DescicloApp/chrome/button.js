@@ -10,8 +10,7 @@ AloogleDescicloAppButton = {
 }
 }
 
-function installButton()
-{
+function installButton() {
 	var id = "descicloapp-button-1";
 	var toolbarId = "nav-bar";
  
@@ -24,14 +23,13 @@ function installButton()
 	toolbar.collapsed = false;
 }
  
-function firstRun(extensions)
-{
+function firstRun(extensions) {
     var extension = extensions.get("descicloapp@aloogle");
-	if (extension.firstRun)
-		installButton();
+	if (extension.firstRun) {
+		installButton(); }
 }
- 
-if (Application.extensions)
+
+if (Application.extensions) {
 	firstRun(Application.extensions);
-else
-	Application.getExtensions(firstRun);
+} else {
+	Application.getExtensions(firstRun); }
