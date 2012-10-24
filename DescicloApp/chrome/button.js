@@ -1,11 +1,13 @@
 var descicloWindow = null;
 
-function AloogleDescicloAppButton() {
+AloogleDescicloAppButton = {
+1: function() {
   if (descicloWindow && !descicloWindow.closed) {
     descicloWindow.close();
   } else {
     descicloWindow = window.open('chrome://descicloapp/content/DescicloApp/popup.html', 'descicloapp', 'titlebar=no,width=325,height=400,left=' + (document.documentElement.clientWidth - 330) + ',top=' + 60);
   }
+}
 }
 
 function installButton()
@@ -24,13 +26,12 @@ function installButton()
  
 function firstRun(extensions)
 {
-	var extension = extensions.get("descicloapp@aloogle"); 
+    var extension = extensions.get("descicloapp@aloogle");
 	if (extension.firstRun)
-		installButton(), window.open('chrome://descicloapp/content/DescicloApp/paginas/changelog.html', '', 'chrome, centerscreen, width=900,height=600');
-
+		installButton();
 }
  
 if (Application.extensions)
-		firstRun(Application.extensions);
+	firstRun(Application.extensions);
 else
-		Application.getExtensions(firstRun);
+	Application.getExtensions(firstRun);
