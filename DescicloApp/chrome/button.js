@@ -1,7 +1,6 @@
-var descicloWindow = null;
-
 AloogleDescicloAppButton = {
 1: function() {
+  var descicloWindow = null;
   if (descicloWindow && !descicloWindow.closed) {
     descicloWindow.close();
   } else {
