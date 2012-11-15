@@ -201,4 +201,5 @@ window.onload = function(){
 		$('#twitter').click(function() { twitter() });
 		$('#blog').click(function() { blog() });
 		$('#ajuda').click(function() { ajuda() });
+		document.getElementById('q').focus();
 }
