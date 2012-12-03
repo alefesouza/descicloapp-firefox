@@ -11,5 +11,5 @@ toolbar[iconsize="small"] #descicloapp-button-1 {
 }
 
 toolbar[iconsize="small"] #descicloapp-button-1:hover {
-	list-style-image: url("chrome://descicloapp/content/DescicloApp/icons/icon.png");
+	list-style-image: url("chrome://descicloapp/content/DescicloApp/icons/icon.ico");
 }
