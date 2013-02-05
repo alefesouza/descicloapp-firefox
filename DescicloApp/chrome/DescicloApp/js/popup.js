@@ -79,12 +79,28 @@ function recentes(){
 function mais(){
 	if (this.parentNode.nextSibling.childNodes[0].style.display != '') {
 		document.getElementById('mais').innerHTML = '<img src="imagens/cimawp7.png" width="16px"> Menos';
-		window.innerHeight = 635;
-		this.parentNode.nextSibling.childNodes[0].style.display = ''; }
+		window.innerHeight = 635; this.parentNode.nextSibling.childNodes[0].style.display = ''; }
 	else {
 	document.getElementById('mais').innerHTML = '<img src="imagens/baixowp7.png" width="16px"> Mais';
-	window.innerHeight = 400;
-	this.parentNode.nextSibling.childNodes[0].style.display = 'none';}
+	window.innerHeight = 400; this.parentNode.nextSibling.childNodes[0].style.display = 'none';}
+}
+
+function boteco(){
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Forum:Boteco'); window.close();
+}
+
+function aa(){
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/index.php?action=edit&preload=Predefini%C3%A7%C3%A3o%3AForumheader%2FAlco%C3%B3licos+An%C3%B4nimos&editintro=&title=Forum%3A' + document.getElementById('q').value + '&create=Adicionar+novo+t%C3%B3pico'); window.close(); }
+	else {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Forum:Alco%C3%B3licos_An%C3%B4nimos'); window.close(); }
+}
+
+function truco(){
+	if(q.value != "") {
+		window.open('http://' + document.getElementById('alternativo').value + '/index.php?action=edit&preload=Predefini%C3%A7%C3%A3o%3AForumheader%2FOfftopic&title=Forum%3A' + document.getElementById('q').value + '&create=Adicionar+novo+t%C3%B3pico'); window.close(); }
+	else {
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Forum:Mesa_de_Truco'); window.close(); }
 }
 
 function desnoticias(){
@@ -96,7 +112,7 @@ function desnoticias(){
 
 function descionario(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?action=edit&preload=Predefini%C3%A7%C3%A3o%3ANovo+verbete&title=Descion%C3%A1rio%3A' + document.getElementById('q').value + '&create=Criar+p%C3%A1gina'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desnot%C3%ADcias:' + document.getElementById('q').value); window.close(); }
 	else {
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desnot%C3%ADcias:P%C3%A1gina_principal'); window.close(); }
 }
@@ -124,14 +140,14 @@ function descifras(){
 
 function desentrevistas(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?action=edit&preload=Predefini%C3%A7%C3%A3o%3Adesentrevistasnova&title=Desentrevistas%3A' + document.getElementById('q').value + '&create=Criar+p%C3%A1gina'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desentrevistas:' + document.getElementById('q').value); window.close(); }
 	else {
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desentrevistas:P%C3%A1gina_principal'); window.close(); }
 }
 
 function descitacoes(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?action=edit&preload=Predefini%C3%A7%C3%A3o%3ANova+Descita%C3%A7%C3%A3o&editintro=Predefini%C3%A7%C3%A3o%3AAviso+Descita%C3%A7%C3%B5es&title=Descita%C3%A7%C3%B5es%3A' + document.getElementById('q').value + '&create=Criar+p%C3%A1gina'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Descita%C3%A7%C3%B5es:' + document.getElementById('q').value); window.close(); }
 	else {
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Descita%C3%A7%C3%B5es:P%C3%A1gina_principal'); window.close(); }
 }
@@ -143,16 +159,9 @@ function deslistas(){
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Deslistas:P%C3%A1gina_principal'); window.close(); }
 }
 
-function desinopses(){
-	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?title=Desinopses:' + document.getElementById('q').value + '&action=edit&preload=Predefini%C3%A7%C3%A3o:Criar%20novo%20roteiro/preload'); window.close(); }
-	else {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desinopses:P%C3%A1gina_principal'); window.close(); }
-}
-
 function fatos(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/index.php?action=edit&preload=Predefini%C3%A7%C3%A3o%3ACriar+novos+fatos%2Fpreload&title=Fatos%3A' + document.getElementById('q').value + '&create=Criar+p%C3%A1gina'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Fatos:' + document.getElementById('q').value); window.close(); }
 	else {
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Fatos:P%C3%A1gina_principal'); window.close(); }
 }
@@ -187,6 +196,9 @@ window.onload = function(){
 		$('#mensagem').click(function() { mensagem() });
 		$('#recentes').click(function() { recentes() });
 		document.getElementById('mais').onclick=mais;
+		$('#boteco').click(function() { boteco() });
+		$('#aa').click(function() { aa() });
+		$('#truco').click(function() { truco() });
 		$('#desnoticias').click(function() { desnoticias() });
 		$('#descionario').click(function() { descionario() });
 		$('#deslivros').click(function() { deslivros() });
@@ -195,7 +207,6 @@ window.onload = function(){
 		$('#desentrevistas').click(function() { desentrevistas() });
 		$('#descitacoes').click(function() { descitacoes() });
 		$('#deslistas').click(function() { deslistas() });
-		$('#desinopses').click(function() { desinopses() });
 		$('#fatos').click(function() { fatos() });
 		$('#facebook').click(function() { facebook() });
 		$('#twitter').click(function() { twitter() });

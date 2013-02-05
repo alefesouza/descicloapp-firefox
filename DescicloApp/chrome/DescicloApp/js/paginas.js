@@ -29,6 +29,7 @@ window.onload=function(){
 		window.location="sobre.html";
 	});
 	$('#descicloapp').click(function() { descicloApp() });
+	$('#info').click(function() { descicloApp() });
 	$('#opera').click(function() {   
 		window.location="opera.html";
 	});
