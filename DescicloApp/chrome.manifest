@@ -1,4 +1,6 @@
 content descicloapp chrome/
-style chrome://global/content/customizeToolbar.xul chrome://descicloapp/content/button.css
+style chrome://global/content/customizeToolbar.xul chrome://descicloapp/content/button.css chrome://descicloapp/content/desciclotoolbar.css
 
 overlay	chrome://browser/content/browser.xul chrome://descicloapp/content/button.xul
+overlay	chrome://browser/content/browser.xul chrome://descicloapp/content/desciclotoolbar.xul
+overlay	chrome://browser/content/browser.xul chrome://descicloapp/content/contexto.xul

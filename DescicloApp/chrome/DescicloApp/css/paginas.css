@@ -5,8 +5,6 @@
 
 /* Styles common to WebUI pages that share the options pages style */
 
-/* Codigo copiado da antiga pagina de configuracoes do Google Chrome, que eu tentei adaptar para Firefox */
-
 body {
   cursor: default;
   font-size: 13px;
@@ -17,6 +15,19 @@ a:link {
 }
 
 a:active {
+  color: rgb(37, 64, 113);
+}
+
+a.script{
+  color: rgb(63, 110, 194);
+}
+
+a.script:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.script:active {
   color: rgb(37, 64, 113);
 }
 

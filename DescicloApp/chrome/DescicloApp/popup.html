@@ -51,7 +51,6 @@ a.script:active {
 	padding: 2px 4px;
 	vertical-align:middle;
 	border-radius: 3px;
-	transition: all 0.5s;
 }
 
 .menuitem:hover {
@@ -60,7 +59,6 @@ a.script:active {
 	cursor: pointer;
 	border: #000000 solid 1px;
 	background:url(imagens/preto_real_player.png);
-	transition: all 0.5s;
 }
 
 .menuitem:active {
@@ -82,6 +80,29 @@ a.script:active {
 
 .seta:hover {
 	background:url(imagens/frente_mouse.png) no-repeat center right;
+}
+
+#seta2 {
+	height:20px;
+	width:20px;
+	background: url('imagens/frente.png') no-repeat;
+}
+
+#seta2:hover {
+	background: url('imagens/frente_mouse.png') no-repeat;
+}
+
+#recentes {
+	width: 265px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+#recentespopup {
+	width: 20px;
+	float:right;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
 }
 
 div.sombra {
@@ -114,7 +135,7 @@ div.sombra:active {
 </style>
 </head>
 <body>
-<div align="center"><b>DescicloApp</b> <div id="fechar" class="tooltip8"><span>Fechar</span></div></div>
+<div align="center"><b>DescicloApp</b><a id="hifen" style="cursor: default; text-decoration: none;"></a><a id="username" style="cursor: pointer;"></a> <div id="fechar" class="tooltip8"><span>Fechar</span></div></div>
 <br><br>
 <table height="25px">
 <tr><div class="tooltip4"><span>Escolha o dom&iacute;nio alternativo</span><select name="alternativo" id="alternativo" style="height:22px;width:50px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float:left;">
@@ -126,7 +147,7 @@ div.sombra:active {
 <option value="desnoticias.org">desnoticias.org</option>
 <option value="sophia.desciclopedia.org">sophia.</option>
 <option value="roberto.desciclopedia.org">roberto.</option>
-</select></div><input type="text" class="text" id="q" style="float:left; width: 175px; border-radius: 0px;" autocomplete="on" placeholder="Escreva algo..." name="q" /><div class="tooltip"><span>Ir a esta p&aacute;gina</span><input type="submit" id="ir" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url(imagens/avancarwp7.png); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius:0px;" value="" /></div><div class="tooltip"><span>Editar ou criar essa p&aacute;gina</span><input type="submit" id="editar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url(imagens/novowp7.png); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius: 0px;" value="" /></div><div class="tooltip"><span>Pesquisar</span><input type="submit" id="pesquisar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; float:left; border-bottom-right-radius: 10px; border-top-right-radius: 10px; background-image:url(imagens/buscawp7.png); background-repeat: no-repeat; background-position: center; background-size: 20px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="" /></div></tr></table>
+</select></div><input type="text" class="text" id="q" style="float:left; width: 175px; border-radius: 0px;" autocomplete="on" placeholder="Escreva algo..." name="q" /><div class="tooltip"><span>Ir a esta p&aacute;gina</span><input type="submit" id="ir" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url('imagens/avancarwp7.png'); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius:0px;" value="" /></div><div class="tooltip"><span>Editar ou criar essa p&aacute;gina</span><input type="submit" id="editar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; background-image:url('imagens/novowp7.png'); background-repeat: no-repeat; background-position: center; background-size: 25px; float:left; border-radius: 0px;" value="" /></div><div class="tooltip"><span>Pesquisar</span><input type="submit" id="pesquisar" class="azul" style="width:25px; height:22px; border: #000000 solid 1px; float:left; border-bottom-right-radius: 10px; border-top-right-radius: 10px; background-image:url('imagens/buscawp7.png'); background-repeat: no-repeat; background-position: center; background-size: 20px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;" value="" /></div></tr></table>
 <br><br>
 	<div id="irb" class="menuitem">
 		<img src="icons/icon.ico"> Ir a Desciclop&eacute;dia
@@ -146,11 +167,14 @@ div.sombra:active {
 	</div>
 	<div id="carregar" class="menuitem">
 		<img src="imagens/upload.png" width="16px"> Carregar arquivo
-	</div> 
+	</div>
+	<div id="aleatorio" class="menuitem">
+		<img src="imagens/aleatorio.png" width="16px"> P&aacute;gina aleat&oacute;ria
+	</div>
 	<div id="mensagem" class="menuitem"><div class="seta">
 		<img src="imagens/enviarmensagem.png" width="16px" height="16px"> Enviar uma mensagem </div>
 	</div>
-	<div id="recentes" class="menuitem">
+	<div class="tooltip2"><span>Abrir dentro da extens&atilde;o</span><div id="recentespopup" class="menuitem"><div id="seta2"></div></div></div><div id="recentes" class="menuitem">
 		<img src="imagens/mrwp7.png" width="16px" height="16px"> Mudan&ccedil;as recentes
 	</div>
 	<div class="menuitem"><div id="mais"><img src="imagens/baixowp7.png" width="16px"> Mais</div>
@@ -159,7 +183,7 @@ div.sombra:active {
 
 <br><br>
 
-<div class="tooltip3 sombra" style="float:left"><a id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="blog"><img src="imagens/blogger.ico" height="16px"></a><span>Blog</span></div>&nbsp;&nbsp;<div id="ajuda" class="tooltip2 sombra" style="float: right;"><img src="imagens/ajuda.png" width="16px" height="16px"><span>Ajuda</span></div>
+<div class="tooltip3 sombra" style="float:left"><a id="facebook"><img src="imagens/facebook.png" height="16px"></a><span>Facebook</span></div>&nbsp;&nbsp;<div class="tooltip3 sombra" style="float:left"><a id="twitter"><img src="imagens/twitter.png" height="16px"></a><span>Twitter</span></div>&nbsp;&nbsp;<div id="ajuda" class="tooltip2 sombra" style="float: right;"><img src="imagens/ajuda.png" width="16px" height="16px"><span>Ajuda</span></div>
 
 
 <div style="display:none;">

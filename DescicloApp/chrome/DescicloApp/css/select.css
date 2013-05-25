@@ -5,8 +5,6 @@
  * This is the generic select css used on various WebUI implementations.
 */
 
-/* Esse codigo foi copiado da antiga pagina de configuracoes do Google Chrome, com algumas modificacoes minhas */
-
 select {
 	-moz-appearance: button;
 	border-radius: 10px;

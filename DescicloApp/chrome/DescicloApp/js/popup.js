@@ -76,6 +76,10 @@ function carregar(){
 	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Carregar_arquivo'); window.close();
 }
 
+function aleatorio(){
+	window.open('http://' + document.getElementById('alternativo').value + '/wiki/Especial:Aleat%C3%B3ria')
+}
+
 function mensagem(){
 	window.open('msg.html', '_self');
 	window.innerHeight = 400;
@@ -88,13 +92,18 @@ function recentes(){
 		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Special:Recentchanges/250'); window.close(); }
 }
 
+function recentespopup(){
+	var esquerda = (document.documentElement.clientWidth - 560);
+	window.open('paginas/recentes.html', '_self'); window.innerHeight = 600; window.innerWidth = 560; window.moveBy(esquerda,0);
+}
+
 function mais(){
 	if (this.parentNode.nextSibling.childNodes[0].style.display != '') {
 		document.getElementById('mais').innerHTML = '<img src="imagens/cimawp7.png" width="16px"> Menos';
-		window.innerHeight = 635; this.parentNode.nextSibling.childNodes[0].style.display = ''; }
+		window.innerHeight = 655; this.parentNode.nextSibling.childNodes[0].style.display = ''; }
 	else {
 	document.getElementById('mais').innerHTML = '<img src="imagens/baixowp7.png" width="16px"> Mais';
-	window.innerHeight = 400; this.parentNode.nextSibling.childNodes[0].style.display = 'none';}
+	window.innerHeight = 420; this.parentNode.nextSibling.childNodes[0].style.display = 'none';}
 }
 
 function boteco(){
@@ -124,9 +133,9 @@ function desnoticias(){
 
 function descionario(){
 	if(q.value != "") {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desnot%C3%ADcias:' + document.getElementById('q').value); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Descion%C3%A1rio:' + document.getElementById('q').value); window.close(); }
 	else {
-		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Desnot%C3%ADcias:P%C3%A1gina_principal'); window.close(); }
+		window.open('http://' + document.getElementById('alternativo').value + '/wiki/Descion%C3%A1rio:P%C3%A1gina_principal'); window.close(); }
 }
 
 function deslivros(){
@@ -186,15 +195,46 @@ function twitter(){
 	window.open('http://twitter.com/DaDesciclopedia'); window.close();
 }
 
-function blog(){
-	window.open('http://descicloblog.blogspot.com'); window.close();
-}
-
 function ajuda(){
 	window.open('paginas/faq.html'); window.close();
 }
 
+function restaurar() {
+  var favorito = descicloapp.prefs.getCharPref("alternativofavorito");
+  if (!favorito) {
+    return;
+  }
+  var select = document.getElementById("alternativo");
+  for (var i = 0; i < select.children.length; i++) {
+    var child = select.children[i];
+    if (child.value == favorito) {
+      child.selected = "true";
+      break;
+    }
+  }
+}
+
+// nao sei porque nao funcinou se eu colocasse <script src="../opcoes.js"></script>
+var descicloapp = {
+	startup: function() {
+		this.prefs = Components.classes["@mozilla.org/preferences-service;1"]
+				.getService(Components.interfaces.nsIPrefService)
+				.getBranch("descicloapp.");
+	},
+	
+	shutdown: function() {
+		this.prefs.removeObserver("", this);
+	}
+}
+
+window.addEventListener("load", function(e) { descicloapp.startup(); }, false);
+window.addEventListener("unload", function(e) { descicloapp.shutdown(); }, false);
+
 window.onload = function(){
+		$('hr').css('background-color',descicloapp.prefs.getCharPref("corfavorita"));
+		$('#ir').css({'background-color':descicloapp.prefs.getCharPref("corfavorita"),});
+		$('#editar').css({'background-color':descicloapp.prefs.getCharPref("corfavorita"),});
+		$('#pesquisar').css({'background-color':descicloapp.prefs.getCharPref("corfavorita"),});
 		$('#fechar').click(function() { window.close() });
 		$('#ir').click(function() { ir() });
 		$('#editar').click(function() { editar() });
@@ -205,8 +245,10 @@ window.onload = function(){
 		$('#contribuicao').click(function() { contribuicao() });
 		$('#vigiado').click(function() { vigiado() });
 		$('#carregar').click(function() { carregar() });
+		$('#aleatorio').click(function() { aleatorio() });
 		$('#mensagem').click(function() { mensagem() });
 		$('#recentes').click(function() { recentes() });
+		$('#recentespopup').click(function() { recentespopup() });
 		document.getElementById('mais').onclick=mais;
 		$('#boteco').click(function() { boteco() });
 		$('#aa').click(function() { aa() });
@@ -222,7 +264,7 @@ window.onload = function(){
 		$('#fatos').click(function() { fatos() });
 		$('#facebook').click(function() { facebook() });
 		$('#twitter').click(function() { twitter() });
-		$('#blog').click(function() { blog() });
 		$('#ajuda').click(function() { ajuda() });
 		document.getElementById('q').focus();
+		restaurar();
 }

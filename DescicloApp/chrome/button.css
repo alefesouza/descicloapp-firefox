@@ -1,15 +1,15 @@
-#descicloapp-button-1 {
+#descicloapp-button {
 	list-style-image: url("chrome://descicloapp/content/DescicloApp/icons/iconpb_24.png");
 }
 
-toolbar[iconsize="small"] #descicloapp-button-1 {
+toolbar[iconsize="small"] #descicloapp-button {
 	list-style-image: url("chrome://descicloapp/content/DescicloApp/icons/iconpb.png");
 }
 
-#descicloapp-button-1:hover {
+#descicloapp-button:hover {
 	list-style-image: url("chrome://descicloapp/content/DescicloApp/icons/icon_24.png");
 }
 
-toolbar[iconsize="small"] #descicloapp-button-1:hover {
+toolbar[iconsize="small"] #descicloapp-button:hover {
 	list-style-image: url("chrome://descicloapp/content/DescicloApp/icons/icon.ico");
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://contextsearch/content/gnome-fix.css" type="text/css"?>  
+<!DOCTYPE overlay >
+<overlay id="descicloapp-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://descicloapp/content/contexto.js" />
+<script type="application/x-javascript" src="chrome://descicloapp/content/opcoes.js"/>
+
+<popup id="contentAreaContextMenu">
+	<menu label="DescicloApp" insertafter="context-searchselect" class="menu-iconic" image="chrome://descicloapp/content/DescicloApp/icons/icon.ico" id="desciclo" accesskey="D">
+		<menupopup>
+			<menuitem id="irdescicloapp" label="Ir a Desciclopédia" class="menuitem-iconic" image="chrome://descicloapp/content/DescicloToolbar/imagens/avancarwp7.png" oncommand="aloogle.ir();" accesskey="I" />
+			<menuitem id="editardescicloapp" label="Editar na Desciclopédia" class="menuitem-iconic" image="chrome://descicloapp/content/DescicloToolbar/imagens/novowp7.png" oncommand="aloogle.editar();" accesskey="E" />
+			<menuitem id="buscadescicloapp" label="Buscar na Desciclopédia" class="menuitem-iconic" image="chrome://descicloapp/content/DescicloToolbar/imagens/buscawp7.png" oncommand="aloogle.buscar();" accesskey="B" />
+		</menupopup>
+	</menu>
+</popup>
+	
+</overlay>

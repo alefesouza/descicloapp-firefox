@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+ 
+<prefwindow id="descicloapp-prefs" title="Opções - DescicloApp para Firefox" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" height="300px" width="400px">
+ 
+<prefpane id="descicloapp-painel" label="Opções do DescicloApp">
+  <preferences>
+    <preference id="pref_alternativofavorito" name="descicloapp.alternativofavorito" type="string"/>
+	<preference id="pref_corfavorita" name="descicloapp.corfavorita" type="string"/>
+  </preferences>
+ 
+    <label control="alternativofavorito" value="Qual é seu domínio alternativo favorito?"/>
+	<menulist preference="pref_alternativofavorito" id="alternativofavorito" editable="true" width="200">
+		<menupopup>
+			<menuitem label="desciclopedia.org" />
+			<menuitem label="desciclopedia.ws" />
+			<menuitem label="pudim.info" />
+			<menuitem label="vist.as" />
+			<menuitem label="pesquisa.la" />
+			<menuitem label="desnoticias.org" />
+			<menuitem label="roberto.desciclopedia.org" />
+			<menuitem label="sophia.desciclopedia.org" />
+		</menupopup>
+    </menulist>
+	<label control="corfavorita" value="Qual é sua cor favorita?"/>
+	<menulist preference="pref_corfavorita" id="corfavorita" editable="true" width="200">
+		<menupopup>
+			<menuitem label="Cyan" />
+			<menuitem label="Blue" />
+			<menuitem label="Red" />
+			<menuitem label="Green" />
+			<menuitem label="Gray" />
+			<menuitem label="Orange" />
+			<menuitem label="White" />
+			<menuitem label="Purple" />
+			<menuitem label="Pink" />
+			<menuitem label="Yellow" />
+		</menupopup>
+    </menulist>
+	<label value="Coloque o nome da cor em inglês ou o"/><label href="http://www.efeitosespeciais.net/tabela.htm" class="text-link" value="código hexadecimal dela" />
+</prefpane>
+ 
+</prefwindow>

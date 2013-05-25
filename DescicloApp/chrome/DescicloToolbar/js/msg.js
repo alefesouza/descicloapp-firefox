@@ -62,9 +62,6 @@ window.addEventListener("unload", function(e) { descicloapp.shutdown(); }, false
 window.onload = function(){
 	$('hr').css('background-color',descicloapp.prefs.getCharPref("corfavorita"));
 	$('#fechar').click(function() { window.close(); })
-	$('#voltar').click(function(){  
-		window.location="popup.html"; window.innerHeight = 420;
-	});
 	$('#mensagem').click(function() { mensagem() });
 	$('#email').click(function() { email() });
 	document.getElementById('q').focus();

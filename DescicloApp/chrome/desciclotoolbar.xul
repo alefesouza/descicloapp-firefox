@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="chrome://descicloapp/content/desciclotoolbar.css"?>
+<!DOCTYPE overlay >
+<overlay id="descicloapp-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://descicloapp/content/desciclotoolbar.js" />
+<toolbox id="navigator-toolbox">
+	<toolbar id="DescicloToolbar" toolbarname="DescicloToolbar">
+		<box flex="1" pack="start">
+		<toolbarbutton id="desciclo" tooltiptext="Desciclopédia" oncommand="desciclopedia()" />
+		<textbox id="q" editable="true" minwidth="100" size="50" onkeypress="enter(event);"/>
+		<toolbarbutton id="buscar"
+			tooltiptext="Pesquisar"
+			oncommand="DescicloToolbarBusca(event)" />
+		<toolbarseparator />
+		<toolbarbutton id="pagina"
+			tooltiptext="Minha página"
+			oncommand="pagina()"
+			width="35px"/>
+		<toolbarbutton id="discussao"
+			tooltiptext="Minha discussão"
+			oncommand="discussao()" />
+		<toolbarbutton id="contribuicoes"
+			tooltiptext="Minhas contribuicões"
+			oncommand="contribuicoes()" />
+		<toolbarbutton id="vigiadas"
+			tooltiptext="Páginas vigiadas"
+			oncommand="vigiadas()" />
+		<toolbarbutton id="arquivo"
+			tooltiptext="Enviar arquivo"
+			oncommand="arquivo()" />
+		<toolbarbutton id="aleatorio"
+			tooltiptext="Página aleatória"
+			oncommand="aleatorio()" />
+		<toolbarbutton id="mensagem"
+			tooltiptext="Enviar mensagem"
+			oncommand="mensagem()" />
+		<toolbarbutton id="recentes"
+			tooltiptext="Mudanças recentes"
+			oncommand="recentes()" />
+		<toolbarbutton id="mais" type="menu" tooltiptext="Mais">
+			<menupopup>
+				<menuitem label="Boteco" image="chrome://descicloapp/content/DescicloApp/imagens/boteco.png" class="menuitem-iconic" oncommand="boteco()" />
+				<menuitem label="Mesa de Truco" image="chrome://descicloapp/content/DescicloApp/imagens/truco.png" class="menuitem-iconic" oncommand="mesa()" />
+				<menuitem label="A.A. (Ajuda)" image="chrome://descicloapp/content/DescicloApp/imagens/aa.png" class="menuitem-iconic" oncommand="aa()" />
+				<menuitem label="Desnotícias" image="chrome://descicloapp/content/DescicloApp/imagens/desnoticias.png" class="menuitem-iconic" oncommand="desnoticias()" />
+				<menuitem label="Descionário" image="chrome://descicloapp/content/DescicloApp/imagens/descionario.png" class="menuitem-iconic" oncommand="descionario()" />
+				<menuitem label="Deslivros" image="chrome://descicloapp/content/DescicloApp/imagens/deslivros.png" class="menuitem-iconic" oncommand="deslivros()" />
+				<menuitem label="Despoesias" image="chrome://descicloapp/content/DescicloApp/imagens/despoesias.png" class="menuitem-iconic" oncommand="despoesias()" />
+				<menuitem label="Descifras" image="chrome://descicloapp/content/DescicloApp/imagens/descifras.png" class="menuitem-iconic" oncommand="descifras()" />
+				<menuitem label="Desentrevistas" image="chrome://descicloapp/content/DescicloApp/imagens/desentrevistas.png" class="menuitem-iconic" oncommand="desentrevistas()" />
+				<menuitem label="Descitações" image="chrome://descicloapp/content/DescicloApp/imagens/descitacoes.png" class="menuitem-iconic" oncommand="descitacoes()" />
+				<menuitem label="Deslistas" image="chrome://descicloapp/content/DescicloApp/imagens/deslistas.png" class="menuitem-iconic" oncommand="deslistas()" />
+				<menuitem label="Fatos" image="chrome://descicloapp/content/DescicloApp/imagens/fatos.png" class="menuitem-iconic" oncommand="fatos()" />
+            </menupopup>
+		</toolbarbutton></box>
+		<box flex="1" pack="end">
+		<toolbarbutton id="feedback"
+			tooltiptext="Feedback"
+			oncommand="feedback()" />
+		<toolbarbutton id="facebook"
+			tooltiptext="Facebook"
+			oncommand="facebook()" />
+		<toolbarbutton id="twitter"
+			tooltiptext="Twitter"
+			oncommand="twitter()" />
+		<toolbarbutton id="opcoes"
+			tooltiptext="Opções"
+			oncommand="opcoes()" /></box>   
+	</toolbar>
+</toolbox>
+</overlay>

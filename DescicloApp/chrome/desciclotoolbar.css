@@ -1,0 +1,74 @@
+#desciclo {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/icons/icon_19.png");
+	margin-left: 3px;
+}
+
+#buscar {
+	list-style-image: url("chrome://descicloapp/content/DescicloApp/imagens/buscawp7.png");
+	margin-left: 3px;
+}
+
+#pagina {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/mafagafo.png");
+	margin-left: 3px;
+}
+
+#discussao {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/discussao.png");
+	margin-left: 3px;
+}
+
+#contribuicoes {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/contribuicao.png");
+	margin-left: 3px;
+}
+
+#vigiadas {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/vigiado.png");
+	margin-left: 3px;
+}
+
+#arquivo {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/upload.png");
+	margin-left: 3px;
+}
+
+#aleatorio{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/aleatorio.png");
+	margin-left: 3px;
+}
+
+#mensagem {
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/enviarmensagem.png");
+	margin-left: 3px;
+}
+
+#recentes{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/mrwp7.png");
+	margin-left: 3px;
+}
+
+#mais{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/baixowp7.png");
+	margin-left: 3px;
+}
+
+#feedback{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/feedback.png");
+	margin-left: 3px;
+}
+
+#facebook{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/facebook.png");
+	margin-left: 3px;
+}
+
+#twitter{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/twitter.png");
+	margin-left: 3px;
+}
+
+#opcoes{
+	list-style-image: url("chrome://descicloapp/content/DescicloToolbar/imagens/opcoes.png");
+	margin-right: 3px;
+}

@@ -3,18 +3,18 @@
 <title>Enviar uma mensagem - DescicloApp</title>
 <link rel="shortcut icon" href="icons/icon.ico" />
 <link rel="author" href="https://plus.google.com/101361157875821775334/" />
-<link rel="stylesheet" href="popup.html" />
-<link rel="stylesheet" href="css/select.css" />
-<link rel="stylesheet" href="css/button.css" />
-<link rel="stylesheet" href="css/inputtext.css" />
-<link rel="stylesheet" href="css/tooltip.css" />
-<script src="js/jquery/jquery-1.9.1.min.js"></script>
-<script src="js/jquery/jquery.ui.core.js"></script>
-<script src="js/jquery/jquery.ui.widget.js"></script>
-<script src="js/jquery/jquery.ui.button.js"></script>
-<script src="js/jquery/jquery.ui.position.js"></script>
-<script src="js/jquery/jquery.ui.dialog.js"></script>
-<link rel="stylesheet" href="css/jquery/jquery.ui.all.css" />  
+<link rel="stylesheet" href="../DescicloApp/popup.html" />
+<link rel="stylesheet" href="../DescicloApp/css/select.css" />
+<link rel="stylesheet" href="../DescicloApp/css/button.css" />
+<link rel="stylesheet" href="../DescicloApp/css/inputtext.css" />
+<link rel="stylesheet" href="../DescicloApp/css/tooltip.css" />
+<script src="../DescicloApp/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../DescicloApp/js/jquery/jquery.ui.core.js"></script>
+<script src="../DescicloApp/js/jquery/jquery.ui.widget.js"></script>
+<script src="../DescicloApp/js/jquery/jquery.ui.button.js"></script>
+<script src="../DescicloApp/js/jquery/jquery.ui.position.js"></script>
+<script src="../DescicloApp/js/jquery/jquery.ui.dialog.js"></script>
+<link rel="stylesheet" href="../DescicloApp/css/jquery/jquery.ui.all.css" />  
 <script src="js/msg.js"></script>
 <style type="text/css">
 body {
@@ -25,43 +25,27 @@ body {
 	color: #000000;
 	width:305px;
 	height: 400px;
-	background: url('imagens/batata.png') no-repeat center;
-}
-
-#voltar {
-	height:20px;
-	width:20px;
-	vertical-align:middle;
-	background: url('imagens/voltarwp7.png') no-repeat;
-	background-size: 20px;
-	float:left;
-	margin-top:2px;
-	margin-right:4px;
-}
-
-#voltar:hover {
-	background: url('imagens/voltarwp7mouse.png') no-repeat top left;
-	background-size: 20px;
+	background: url('../DescicloApp/imagens/batata.png') no-repeat center;
 }
 
 #fechar {
 	height: 24px;
 	width: 24px;
 	float:right;
-	background: url('imagens/x.png') no-repeat;
+	background: url('../DescicloApp/imagens/x.png') no-repeat;
 }
 
 #fechar:hover {
-	background: url('imagens/x_mouse.png');
+	background: url('../DescicloApp/imagens/x_mouse.png');
 }
 
 #fechar:active {
-	background: url('imagens/x_ativo.png');
+	background: url('../DescicloApp/imagens/x_ativo.png');
 }
 </style> 
 </head>
 <body>
-<div class="tooltip6" id="voltar"><span>Voltar</span></div><div id="fechar" class="tooltip8"><span>Fechar</span></div><div align="center"><h4>Enviar mensagem</h4></div><hr>
+<div id="fechar" class="tooltip8"><span>Fechar</span></div><div align="center"><h4>Enviar mensagem</h4></div><hr>
 <br>
 <table width="25px"><tr><div><div class="tooltip4"><span>Escolha o dom&iacute;nio alternativo</span><select id="alternativo" style="height:22px;width:50px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; float:left;">
 <option value="desciclopedia.org">.org</option>
